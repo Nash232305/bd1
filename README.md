@@ -3,6 +3,6 @@
 >Hengerlyn Nash, 2021051418
 
 
-* Proyectos 
-*Quices
-*Tareas
+* Proyectos  
+* Quices  
+* Tareas
