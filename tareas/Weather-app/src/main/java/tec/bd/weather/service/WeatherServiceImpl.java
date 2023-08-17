@@ -1,5 +1,6 @@
-package tec.bd.weather;
+package tec.bd.weather.service;
 
+import tec.bd.weather.service.WeatherService;
 import java.util.HashMap;
 import java.util.Map;
 import static java.util.Optional.*;

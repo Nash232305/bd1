@@ -1,5 +1,7 @@
-package tec.bd.weather;
+package tec.bd.weather.cli;
 
+import tec.bd.weather.service.WeatherServiceImpl;
+import tec.bd.weather.service.WeatherService;
 import picocli.CommandLine;
 
 @CommandLine.Command(name = "by-city", description = "Get weather for a particular city")
