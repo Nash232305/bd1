@@ -1,41 +1,71 @@
 package tec.bd.weather.service;
 
-import tec.bd.weather.service.WeatherService;
-import java.util.HashMap;
-import java.util.Map;
-import static java.util.Optional.*;
+import tec.bd.weather.entity.Forecast;
+import tec.bd.weather.repository.Repository;
 
 public class WeatherServiceImpl implements WeatherService {
 
-    private Map<String, Float> cityTemperatureData;
-    private Map<String, Float> zipCodeTemperatureData;
-
-    public WeatherServiceImpl() {
-        this.cityTemperatureData = new HashMap<>(){
-            { put("Alajuela", 23.0f ); }
-            { put("San Jose", 24.0f ); }
-            { put("Heredia", 25.0f ); }
-            { put("Cartago", 26.0f ); }
-            { put("Limon", 27.0f ); }
-            { put("Puntarenas", 28.0f ); }
-            { put("Guanacaste", 29.0f ); }
-        };
-
-        this.zipCodeTemperatureData = new HashMap<>(){
-            { put("90210", 23.0f ); }
-            { put("33122", 24.0f ); }
-            { put("506", 25.0f ); }
-        };
+    private Repository<Forecast, Integer> weatherRepository;
+ 
+    public WeatherServiceImpl(Repository<Forecast,Integer> weatherRepository){
+        this.weatherRepository = weatherRepository;
+        
     }
 
     @Override
-    public float getCityTemperature(String city) {
-        var temperature = ofNullable(this.cityTemperatureData.get(city));
-        return temperature.orElseThrow();
+    public float getCityTemperature(String city){
+        var weather = this.weatherRepository
+                .findAll() 
+                .stream()
+                .filter(e -> e.getCityName().equals(city))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException (city + "is not supported"));
+   
+        return weather.getTemperature();
     }
+    
 
     @Override
     public float getZipCodeTemperature(String zipCode) {
-        return 0;
+         var weather = this.weatherRepository
+                .findAll() 
+                .stream()
+                .filter(e -> e.getZipCode().equals(zipCode))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException (zipCode + "is not supported"));
+   
+        return weather.getTemperature();
+        
+    }
+
+    @Override
+    public void newForecast(Forecast newWeather) {
+       
+        Forecast.validate(newWeather);
+        
+        var current = this.weatherRepository.findById(newWeather.getId());
+        if(current.isPresent()){
+            throw new RuntimeException ("Weather forecast ID already exist in database");
+        }
+        this.weatherRepository.save(newWeather);
+    }
+    
+    @Override
+    public Forecast updateForecast(Forecast forecast){
+        Forecast.validate(forecast);
+        var current = this.weatherRepository.findById(forecast.getId());
+        if (current.isEmpty()){
+            throw new RuntimeException ("Weather forecast ID doesn't exists in database");
+        }
+        return this.weatherRepository.update(forecast);
+    }
+    
+    @Override
+    public void removeForecast(int forecastId) {
+        var current = this.weatherRepository.findById(forecastId);
+        if (current.isEmpty()){
+            throw new RuntimeException ("Weather forecast ID doesn't exists in database");
+        }
+        this.weatherRepository.delete(forecastId);
     }
 }
