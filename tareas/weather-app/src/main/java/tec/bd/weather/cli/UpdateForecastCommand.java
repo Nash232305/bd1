@@ -7,12 +7,6 @@ import java.util.Date;
 
 import java.util.Date;
 
-/**
- *
- * @author henge
- */
-
-
 @CommandLine.Command(name = "update-forecast", aliases = { "uf" }, description = "Update existing forecast data")
 public class UpdateForecastCommand implements Runnable {
 
@@ -46,6 +40,4 @@ public class UpdateForecastCommand implements Runnable {
         }
     }
 
-}
-    
 }
