@@ -5,67 +5,62 @@ import tec.bd.weather.repository.Repository;
 
 public class WeatherServiceImpl implements WeatherService {
 
+
     private Repository<Forecast, Integer> weatherRepository;
- 
-    public WeatherServiceImpl(Repository<Forecast,Integer> weatherRepository){
-        this.weatherRepository = weatherRepository;
-        
+
+    public WeatherServiceImpl(Repository<Forecast, Integer> weatherRepository) {
+            this.weatherRepository = weatherRepository;
     }
 
     @Override
-    public float getCityTemperature(String city){
-        var weather = this.weatherRepository
-                .findAll() 
+    public float getCityTemperature(String city) {
+        var weather =this.weatherRepository
+                .findAll()
                 .stream()
-                .filter(e -> e.getCityName().equals(city))
+                .filter(e ->e.getCityName().equals(city))
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException (city + "is not supported"));
-   
+                .orElseThrow(()->new RuntimeException(city + "is not supoorted"));
         return weather.getTemperature();
     }
-    
 
     @Override
     public float getZipCodeTemperature(String zipCode) {
-         var weather = this.weatherRepository
-                .findAll() 
-                .stream()
-                .filter(e -> e.getZipCode().equals(zipCode))
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException (zipCode + "is not supported"));
-   
+            var weather = this.weatherRepository
+                    .findAll()
+                    .stream()
+                    .filter(e-> e.getZipCode().equals(zipCode))
+                    .findFirst()
+                    .orElseThrow(()-> new RuntimeException(zipCode + "is not supported"));
         return weather.getTemperature();
-        
     }
 
     @Override
-    public void newForecast(Forecast newWeather) {
-       
-        Forecast.validate(newWeather);
-        
-        var current = this.weatherRepository.findById(newWeather.getId());
+    public void newForecast(Forecast forecast) {
+        Forecast.validate(forecast);
+
+        var current = this.weatherRepository.findById(forecast.getId());
         if(current.isPresent()){
-            throw new RuntimeException ("Weather forecast ID already exist in database");
+            throw new RuntimeException("Weather forecast ID already exists in database");
         }
-        this.weatherRepository.save(newWeather);
+        this.weatherRepository.save(forecast);
+
     }
-    
-    @Override
+
     public Forecast updateForecast(Forecast forecast){
         Forecast.validate(forecast);
         var current = this.weatherRepository.findById(forecast.getId());
-        if (current.isEmpty()){
-            throw new RuntimeException ("Weather forecast ID doesn't exists in database");
+        if(current.isEmpty()){
+            throw  new RuntimeException("Weather forecast id doesn't exists in database");
         }
-        return this.weatherRepository.update(forecast);
+        return  this.weatherRepository.update(forecast);
     }
-    
-    @Override
-    public void removeForecast(int forecastId) {
-        var current = this.weatherRepository.findById(forecastId);
-        if (current.isEmpty()){
-            throw new RuntimeException ("Weather forecast ID doesn't exists in database");
+
+    public void removeForecast(int forecastId){
+        var forecastToDelete = this.weatherRepository.findById(forecastId);
+        if(forecastToDelete.isEmpty()){
+            throw  new RuntimeException("forecastID doesn't exists");
         }
         this.weatherRepository.delete(forecastId);
+
     }
 }
