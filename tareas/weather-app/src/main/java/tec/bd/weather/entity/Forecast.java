@@ -1,6 +1,5 @@
-
 package tec.bd.weather.entity;
-
+import java.util.Date;
 /**
  *
  * @author henge
@@ -8,24 +7,34 @@ package tec.bd.weather.entity;
 public class Forecast {
     
     private Integer id;
+    private Date forecastDate;
     private float temperature;
     private String cityName;
     private String zipCode;
     private String countryName;
 
-  
-   
     
-    public Forecast (){
+
+   public Forecast(){
+       
     }
-    
-    public Forecast(Integer id,String countryName,String cityName, String zipCode,float temperature){
+
+    public Forecast(Integer id, String cityName, String countryName , String zipCode, Date date,float temperature){
+        this.forecastDate = date;
+        this.countryName = countryName;
         this.id = id;
         this.cityName = cityName;
         this.zipCode = zipCode;
-        this.temperature = temperature;
-        this.countryName = countryName;
-         
+        this.temperature=  temperature;
+
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     public Integer getId() {
@@ -35,21 +44,13 @@ public class Forecast {
     public void setId(Integer id) {
         this.id = id;
     }
-    
+
     public float getTemperature(){
         return temperature;
     }
+    public void setTemperature(float temperature){
 
-    public void setTemperature(float temperature) {
         this.temperature = temperature;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-    }
-
-    public String getZipCode() {
-        return zipCode;
     }
 
     public String getCityName() {
@@ -59,8 +60,9 @@ public class Forecast {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
-    
-     public String getCountryName() {
+
+
+    public String getCountryName() {
         return countryName;
     }
 
@@ -68,41 +70,48 @@ public class Forecast {
         this.countryName = countryName;
     }
 
+    public Date getForecastDate() {
+        return forecastDate;
+    }
+
+    public void setForecastDate(Date forecastDate) {
+        this.forecastDate = forecastDate;
+    }
+
     @Override
     public String toString() {
-        return "Forecast{" + 
-                "id=" + id + 
-                ", temperature=" + temperature + 
-                ", country=" + countryName + '\'' +
-                ", city=" + cityName +  '\'' +
-                ", zipCode=" + zipCode + '\'' +
-                ", temperature=" + temperature + '}';
+        return "Forecast{" +
+                "id=" + id +
+                ", forecastDate=" + forecastDate +
+                ", temperature=" + temperature +
+                ", cityName='" + cityName + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", countryName='" + countryName + '\'' +
+                '}';
     }
-    
-    public static void validate(Forecast weather){
-       
-        if(weather == null){
-           throw new RuntimeException ("No weather forecast was provide");
+
+    public static void validate(Forecast forecast){
+        if(forecast == null){
+            throw new RuntimeException("No weather forecast was provided");
         }
-        if(weather.getId()==null){
-            throw new RuntimeException ("No weather ID was provide");
+        if(forecast.getId() == null){
+            throw new RuntimeException("No weather forecast ID was provided");
         }
-        if (weather.getId()<1){
-             throw new RuntimeException ("Weather forecast ID invalid");
+        if(forecast.getId() < 1){
+            throw new RuntimeException("Weather forecast ID invalid");
         }
-        if(weather.getCountryName().isBlank()){
-             throw new RuntimeException ("Weather forecast country invalid");
+        if(forecast.getZipCode() == null){
+            throw new RuntimeException("No weather forecast Zip Code was provided ");
         }
-        if(weather.getCityName().isBlank()){
-            throw new RuntimeException ("Weather forecast city invalid"); 
+        if(forecast.getCityName() == null){
+            throw new RuntimeException("No weather forecast city name was provided ");
         }
-        if(weather.getZipCode().isBlank()){
-            throw new RuntimeException ("Weather forecast zip code invalid");
+        if(forecast.getCountryName() == null){
+            throw new RuntimeException("No weather forecast country name was provided ");
         }
-        if(weather.getTemperature()<0){
-            throw new RuntimeException ("Weather forecast temperature invalid");
-        }
+
     }
+}
    
     
     
