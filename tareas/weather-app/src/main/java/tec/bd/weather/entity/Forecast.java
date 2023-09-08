@@ -1,22 +1,25 @@
 package tec.bd.weather.entity;
+
 import java.util.Date;
-/**
- *
- * @author henge
- */
+
 public class Forecast {
-    
+
     private Integer id;
+
     private Date forecastDate;
+
     private float temperature;
+
     private String cityName;
-    private String zipCode;
+
+    private  String zipCode;
+
     private String countryName;
 
-    
 
-   public Forecast(){
-       
+    public Forecast(){
+
+
     }
 
     public Forecast(Integer id, String cityName, String countryName , String zipCode, Date date,float temperature){
@@ -97,6 +100,7 @@ public class Forecast {
         if(forecast.getId() == null){
             throw new RuntimeException("No weather forecast ID was provided");
         }
+        //System.out.println(forecast.getId());
         if(forecast.getId() < 1){
             throw new RuntimeException("Weather forecast ID invalid");
         }
@@ -111,9 +115,4 @@ public class Forecast {
         }
 
     }
-}
-   
-    
-    
-    
 }

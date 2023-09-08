@@ -5,10 +5,6 @@ import tec.bd.weather.ApplicationContext;
 import tec.bd.weather.entity.Forecast;
 import java.util.Date;
 
-/**
- *
- * @author henge
- */
 @CommandLine.Command(name = "create-forecast", aliases = {"cf"}, description = "Create new forecast for a city")
 public class CreateForecastCommand implements Runnable {
 

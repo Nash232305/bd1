@@ -1,7 +1,11 @@
 package tec.bd.weather.service;
-
 import tec.bd.weather.entity.Forecast;
 import tec.bd.weather.repository.Repository;
+
+/**
+ *
+ * @author henge
+ */
 
 public class WeatherServiceImpl implements WeatherService {
 

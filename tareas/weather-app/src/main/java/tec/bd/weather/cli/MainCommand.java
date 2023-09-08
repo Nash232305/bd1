@@ -7,11 +7,9 @@ import picocli.CommandLine;
         subcommands = {
                 ForecastByCityCommand.class,
                 ForecastByZipCodeCommand.class,
-                CreateForecastCommand.class,
-                UpdateForecastCommand.class,
                 CommandLine.HelpCommand.class
         },
-        description = "Weather App")
+        description = "Weather App Service by City and Zip Code")
 public class MainCommand implements Runnable {
 
     @Override
