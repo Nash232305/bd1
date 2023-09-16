@@ -9,7 +9,7 @@ on:
 
     paths:
       - tareas/weather-app/**
-      - .github/workflows/weather-app-build.yml 
+      - .github/workflows/weather-app-build.yml
 
 # Trabajos
 
@@ -42,8 +42,4 @@ jobs:
       - name: Publish JAR Dry Run
         run: mvn -B release:prepare release:perform -DdryRun --file tareas/weather-app/pom.xml
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-
-
-
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
