@@ -1,7 +1,7 @@
 Weather-App
 ===========
 
-[![Weather-App Build Pipeline](https://github.com/Nash232305/bd1/actions/workflows/weather-app-build.yml/badge.svg?branch=main)](https://github.com/martinicr/bd1/actions/workflows/weather-app-build.yml)
+[![weather-app-build Pipeline](https://github.com/Nash232305/bd1/actions/workflows/weather-app-build.yml/badge.svg?branch=main)](https://github.com/martinicr/bd1/actions/workflows/weather-app-build.yml)
 
 
 Aplicacion para obtener y publicar pronosticos el clima.
