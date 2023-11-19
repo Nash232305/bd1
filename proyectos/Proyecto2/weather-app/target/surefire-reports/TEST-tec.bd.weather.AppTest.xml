@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tec.bd.weather.AppTest" time="0.177" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\henge\Music\bd1\proyectos\Proyecto2\weather-app\target\test-classes;C:\Users\henge\Music\bd1\proyectos\Proyecto2\weather-app\target\classes;C:\Users\henge\.m2\repository\info\picocli\picocli\4.6.1\picocli-4.6.1.jar;C:\Users\henge\.m2\repository\org\xerial\sqlite-jdbc\3.42.0.1\sqlite-jdbc-3.42.0.1.jar;C:\Users\henge\.m2\repository\mysql\mysql-connector-java\8.0.28\mysql-connector-java-8.0.28.jar;C:\Users\henge\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\henge\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\henge\.m2\repository\com\squareup\retrofit2\retrofit\2.5.0\retrofit-2.5.0.jar;C:\Users\henge\.m2\repository\com\squareup\okhttp3\okhttp\3.12.0\okhttp-3.12.0.jar;C:\Users\henge\.m2\repository\com\squareup\okio\okio\1.15.0\okio-1.15.0.jar;C:\Users\henge\.m2\repository\com\squareup\retrofit2\converter-gson\2.5.0\converter-gson-2.5.0.jar;C:\Users\henge\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\henge\.m2\repository\ch\qos\logback\logback-classic\1.2.9\logback-classic-1.2.9.jar;C:\Users\henge\.m2\repository\ch\qos\logback\logback-core\1.2.9\logback-core-1.2.9.jar;C:\Users\henge\.m2\repository\org\slf4j\jul-to-slf4j\1.7.32\jul-to-slf4j-1.7.32.jar;C:\Users\henge\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\henge\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.1\junit-jupiter-api-5.7.1.jar;C:\Users\henge\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\henge\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\henge\.m2\repository\org\junit\platform\junit-platform-commons\1.7.1\junit-platform-commons-1.7.1.jar;C:\Users\henge\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.1\junit-jupiter-engine-5.7.1.jar;C:\Users\henge\.m2\repository\org\junit\platform\junit-platform-engine\1.7.1\junit-platform-engine-1.7.1.jar;C:\Users\henge\.m2\repository\org\mockito\mockito-core\3.8.0\mockito-core-3.8.0.jar;C:\Users\henge\.m2\repository\net\bytebuddy\byte-buddy\1.10.20\byte-buddy-1.10.20.jar;C:\Users\henge\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.20\byte-buddy-agent-1.10.20.jar;C:\Users\henge\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\henge\.m2\repository\org\mockito\mockito-junit-jupiter\3.8.0\mockito-junit-jupiter-3.8.0.jar;C:\Users\henge\.m2\repository\org\assertj\assertj-core\3.19.0\assertj-core-3.19.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Costa_Rica"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\henge\AppData\Local\Temp\surefire14225161614452119173\surefirebooter1596738096663489452.jar C:\Users\henge\AppData\Local\Temp\surefire14225161614452119173 2023-11-19T01-33-43_099-jvmRun1 surefire13402258024807638434tmp surefire_07410692687115418030tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\henge\Music\bd1\proyectos\Proyecto2\weather-app\target\test-classes;C:\Users\henge\Music\bd1\proyectos\Proyecto2\weather-app\target\classes;C:\Users\henge\.m2\repository\info\picocli\picocli\4.6.1\picocli-4.6.1.jar;C:\Users\henge\.m2\repository\org\xerial\sqlite-jdbc\3.42.0.1\sqlite-jdbc-3.42.0.1.jar;C:\Users\henge\.m2\repository\mysql\mysql-connector-java\8.0.28\mysql-connector-java-8.0.28.jar;C:\Users\henge\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\henge\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\henge\.m2\repository\com\squareup\retrofit2\retrofit\2.5.0\retrofit-2.5.0.jar;C:\Users\henge\.m2\repository\com\squareup\okhttp3\okhttp\3.12.0\okhttp-3.12.0.jar;C:\Users\henge\.m2\repository\com\squareup\okio\okio\1.15.0\okio-1.15.0.jar;C:\Users\henge\.m2\repository\com\squareup\retrofit2\converter-gson\2.5.0\converter-gson-2.5.0.jar;C:\Users\henge\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\henge\.m2\repository\ch\qos\logback\logback-classic\1.2.9\logback-classic-1.2.9.jar;C:\Users\henge\.m2\repository\ch\qos\logback\logback-core\1.2.9\logback-core-1.2.9.jar;C:\Users\henge\.m2\repository\org\slf4j\jul-to-slf4j\1.7.32\jul-to-slf4j-1.7.32.jar;C:\Users\henge\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\henge\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.1\junit-jupiter-api-5.7.1.jar;C:\Users\henge\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\henge\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\henge\.m2\repository\org\junit\platform\junit-platform-commons\1.7.1\junit-platform-commons-1.7.1.jar;C:\Users\henge\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.1\junit-jupiter-engine-5.7.1.jar;C:\Users\henge\.m2\repository\org\junit\platform\junit-platform-engine\1.7.1\junit-platform-engine-1.7.1.jar;C:\Users\henge\.m2\repository\org\mockito\mockito-core\3.8.0\mockito-core-3.8.0.jar;C:\Users\henge\.m2\repository\net\bytebuddy\byte-buddy\1.10.20\byte-buddy-1.10.20.jar;C:\Users\henge\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.20\byte-buddy-agent-1.10.20.jar;C:\Users\henge\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\henge\.m2\repository\org\mockito\mockito-junit-jupiter\3.8.0\mockito-junit-jupiter-3.8.0.jar;C:\Users\henge\.m2\repository\org\assertj\assertj-core\3.19.0\assertj-core-3.19.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\henge"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-07-14"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\henge\Music\bd1\proyectos\Proyecto2\weather-app"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\henge\AppData\Local\Temp\surefire14225161614452119173\surefirebooter1596738096663489452.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="14.0.2+12-46"/>
+    <property name="user.name" value="henge"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\henge\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\henge\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2023.2.5"/>
+    <property name="java.version" value="14.0.2"/>
+    <property name="user.dir" value="C:\Users\henge\Music\bd1\proyectos\Proyecto2\weather-app"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-14.0.2\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\henge\AppData\Local\Microsoft\WindowsApps;;C:\Users\henge\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\henge\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.4\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="14.0.2+12-46"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="tec.bd.weather.AppTest" time="0.167"/>
+</testsuite>
