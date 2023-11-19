@@ -1,0 +1,3 @@
+tec\bd\weather\AppTest.class
+tec\bd\weather\repository\memory\InMemoryForecastRepositoryTest.class
+tec\bd\weather\service\InMemoryForecastBeforeRepositoryTestAnterior.class

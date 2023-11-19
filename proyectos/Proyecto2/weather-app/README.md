@@ -32,23 +32,22 @@ mvn clean install
 ## Instrucciones de ejecución:
 
 ```bash
-# Ver opciones disponibles
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar
+java -jar target/beforeForecast-app-<version>-jar-with-dependencies.jar
 
 # Obtener pronóstico del clima por ciudad
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar by-city 'Alajuela'
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar bc 'Alajuela'
+java -jar target/beforeForecast-app-<version>-jar-with-dependencies.jar by-city 'Alajuela'
+java -jar target/beforeForecast-app-<version>-jar-with-dependencies.jar bc 'Alajuela'
 
 # Crear un nuevo pronóstico del clima en una ciudad
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar create-forecastAnterior 11 'United States' 'New York' '2023-08-19' 10001 23
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar cf 11 'United States' 'New York' '2023-08-19' 10001 23
+java -jar target/beforeForecast-app-<version>-jar-with-dependencies.jar create-forecastAnterior 11 'United States' 'New York' '2023-08-19' 10001 23
+java -jar target/beforeForecast-app-<version>-jar-with-dependencies.jar cf 11 'United States' 'New York' '2023-08-19' 10001 23
 
 # Actualizar un pronóstico del clima
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar update-forecastAnterior 11 'United States' 'New York' '2023-08-19' 10001 23
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar uf 11 'United States' 'New York' '2023-08-19' 10001 23
+java -jar target/beforeForecast--app-<version>-jar-with-dependencies.jar update-forecastAnterior 11 'United States' 'New York' '2023-08-19' 10001 23
+java -jar target/beforeForecast-app-<version>-jar-with-dependencies.jar uf 11 'United States' 'New York' '2023-08-19' 10001 23
 
 # Borrar un pronóstico del clima
-java -jar target/forecastAnterior-app-<version>-jar-with-dependencies.jar rf 1 
+java -jar target/beforeForecast-app-<version>-jar-with-dependencies.jar rf 1 
 
 ```
 
